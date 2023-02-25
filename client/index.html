@@ -7,21 +7,54 @@
     <title>Gossips</title>
     <script defer src="http://localhost:2023/socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
-    <link  rel="stylesheet" type="text/css" href="style.css" />
-
+<link rel="stylesheet" href="./dist/output.css">
 </head>
+<style>
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 30px;
+        background-color: rgb(95, 142, 207);
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgb(201, 59, 220);
+    }
+
+</style>
 <body>
     <header>
-        <h2 class="heading">Online Chatting Website</h2>
+        <h2 class="mt-5 heading text-center text-4xl font-bold text-blue-400">Online Chatting Website</h2>
     </header>
     <main>
-        <div class="container">
-            <div class="message right">Hii Bhai</div>
-            <div class="message left">Bol Bhai</div>
+        <div id="container" style="height: 75vh;" class="p-5 mt-5 rounded-lg card overflow-auto bg-gray-200 w-3/4 m-auto">
+            <!-- <div class="bg-gray-400 relative  text-white p-2 rounded-lg lg:w-1/4 md:w-2/4 sm:w-2/4 float-right clear-both">
+                <span class="font-extrabold "> Rana:</span> <span class="font-serif font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto obcaecati et a provident facere totam possimus voluptatum id, veritatis assumenda, cumque deleniti nostrum sunt maiores dolores. Quod, labore. Eaque.
+                Deleniti soluta doloremque, quae et tempore aliquid, voluptate nihil necessitatibus nam consequatur sunt nisi fugit dignissimos odio praesentium autem consequuntur perferendis voluptatibus distinctio error. Suscipit non omnis ea fugiat excepturi?</span>
+                <span class="absolute right-2 bottom-1 text-white font-light">12:20 AM</span>
+            </div>
+            <div class="bg-gray-400 relative text-white p-2 rounded-lg lg:w-1/4 md:w-2/4 sm:w-2/4 float-left clear-both">
+                <span class="font-extrabold "> Rana:</span> <span class="font-serif font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto obcaecati et a provident facere totam possimus voluptatum id, veritatis assumenda, cumque deleniti nostrum sunt maiores dolores. Quod, labore. Eaque.
+                Deleniti soluta doloremque, quae et tempore aliquid, voluptate nihil necessitatibus nam consequatur sunt nisi fugit dignissimos odio praesentium autem consequuntur perferendis voluptatibus distinctio error. Suscipit non omnis ea fugiat excepturi?</span>
+                <span class="absolute right-2 bottom-1 text-white font-light">12:20 AM</span>
+            </div>
+            <div class="bg-gray-400 relative text-white p-2 rounded-lg lg:w-1/4 md:w-2/4 sm:w-2/4 float-right clear-both">
+                <span class="font-extrabold "> Rana:</span> <span class="font-serif font-thin">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit architecto obcaecati et a provident facere totam possimus voluptatum id, veritatis assumenda, cumque deleniti nostrum sunt maiores dolores. Quod, labore. Eaque.
+                Deleniti soluta doloremque, quae et tempore aliquid, voluptate nihil necessitatibus nam consequatur sunt nisi fugit dignissimos odio praesentium autem consequuntur perferendis voluptatibus distinctio error. Suscipit non omnis ea fugiat excepturi?</span>
+                <span class="absolute right-2 bottom-1 text-white font-light">12:20 AM</span>
+            </div> -->
         </div>
-        <div class="message-div">
-            <input id="message-input" type="text">
-            <button id="send-btn" type="submit">send</button>
+        <div class="message-div  text-gray-400">
+            <form id="input-form">
+                <div class="rounded-md p-2 w-3/4 m-auto">
+                    <input class="w-full text-gray-700 p-2 border-2 border-teal-100 focus-within:outline-teal-500 rounded-xl" id="message-input" type="text">
+                </div>
+                <div class="flex items-center justify-center my-2">    
+                    <button class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 w-40 rounded-lg p-2 hover:scale-110 transition-all ease-in-out" id="send-btn" type="submit">send</button>
+                </div>
+            </form>
         </div>
     </main>
  
